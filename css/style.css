@@ -1,3 +1,23 @@
+/* CUSTOM-PROPS */
+:root{
+  --main-text-color:#6E728E;
+  --main-price-color:#4A4D60;
+  --main-text-light-color:#fff;
+  --main-card-bg-color:#696EDD;
+  --secondary-card-bg-color:#fff;
+  --main-page-bg-color:#F7F7FE;
+}
+
+/* FONTS */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+      url('../fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* GLOBAL */
 html{
   box-sizing: border-box;
@@ -17,11 +37,19 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: "Arial", sans-serif;
-  background-color: #fff;
-  color: #222;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family:'Montserrat',"Arial", sans-serif;
+  background-color: var(--main-page-bg-color);
+  color: var(--main-text-color);
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
 }
 
 img{
@@ -32,9 +60,9 @@ img{
 /* CONTAINER */
 .container{
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1100px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
 }
