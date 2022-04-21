@@ -39,6 +39,7 @@ body{
   margin: 0;
   font-size: 15px;
   line-height: 1.8;
+  font-weight: bold;
   font-family:'Montserrat',"Arial", sans-serif;
   background-color: var(--main-page-bg-color);
   color: var(--main-text-color);
@@ -67,9 +68,78 @@ img{
   margin-right: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 /* MAIN-CONTENT */
 .main-content{
+  padding-top: 71px;
+  padding-bottom: 103px;
   flex-grow: 1;
+  background-image: url("../images/main-bg-image.png"), url("../images/main-bg-image-bottom.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 470px 750px, 470px 750px;
+  background-position: top -250px right -10%, bottom -250px left -20%;
+}
+
+.site-header {
+  text-align: center;
+}
+
+.site-header-heading{
+  margin: 0;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.price-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.annually-price,.monthly-price {
+  opacity: 0.5;
+}
+
+.switch-toglle {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+  border-radius: 32px;
+  cursor: pointer;
+  background-color: var(--main-card-bg-color);
+}
+
+.slider{
+  position: absolute;
+  content: "";
+  right: 4px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--main-text-light-color);
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+}
+
+.switch-check:checked + .slider{
+  transform: translateX(-24px);
 }
 
 /* BACKGROUND-IMAGE FOR RETINA SCREENS */
@@ -80,5 +150,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-
+  .main-content{
+    background-image: url("../images/main-bg-image@2x.png"), url("../images/main-bg-image-bottom@2x.png");
+  }
 }
