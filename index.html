@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,27 +11,36 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
   <main class="main-content">
     <header class="site-header">
-        <div class="container">
+      <div class="container">
         <h1 class="site-header-heading">Our Pricing</h1>
-        <div class="price-option">
-          <p class="annually-price">Annually</p>
-          <div class="switch-toglle">
-            <label  class="switch">
-              <input class="switch-check visually-hidden" type="checkbox">
-              <span class="slider"></span>
-            </label>
+
+        <form class="pricing-switch" action="https://echo.htmlacademy.ru">
+          <!-- Switch -->
+          <label class="switch-label" for="annual-payment-radio">Annually</label>
+          <div class="switch">
+            <!-- Switch-radios -->
+            <label class="switch-control-annualy" for="annual-payment-radio" ></label>
+            <input class="switch-input-annual visually-hidden" type="radio" name="payment-period" value="annual" id="annual-payment-radio" >
+
+            <span class="slider"></span>
+            <label class="switch-control-monthly" for="monthly-payment-radio" ></label>
+            <input class="switch-input-monthly visually-hidden" type="radio" name="payment-period" value="annual" id="monthly-payment-radio">
+
           </div>
-          <p class="monthly-price">Monthly</p>
-        </div>
+          <label class="switch-label" for="monthly-payment-radio">Monthly</label>
+        </form>
       </div>
-      </header>
+    </header>
+
   </main>
 
 
 
   <script src="./js/main.js"></script>
 </body>
+
 </html>
