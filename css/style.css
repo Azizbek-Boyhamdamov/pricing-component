@@ -118,10 +118,6 @@ img{
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  background-image: url("../images/main-bg-image.png"), url("../images/main-bg-image-bottom.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: 350px,350px;
-  background-position:top right, bottom left;
 }
 
 /* SITE-HEADER */
