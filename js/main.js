@@ -1,3 +1,5 @@
+const elPaymentPeriodRadio = document.querySelectorAll('[name="payment-period"]');
+const elPaymentPriceValue  = document.querySelectorAll('.pricing-plan__value');
 
 let basicPrice = document.querySelector('#basic-price');
 let professionalPrice = document.querySelector('#professional-price');
@@ -6,7 +8,20 @@ document.body.addEventListener('change', function(e){
   let target = e.target;
   let message;
 
-  // Basic-Price
+elPaymentPeriodRadio.forEach(function(elPaymentPeriodRadio){
+  elPaymentPeriodRadio.addEventListener('change',function(){
+    let period = elPaymentPeriodRadio.value;
+    if(period === 'annual'){
+      elPaymentPriceValue.forEach(function(elPrice){
+        elPrice.textContent = elPrice.closest('.pricing-plan').dataset.annualyPrice;
+      });
+    }else{
+      elPaymentPriceValue.forEach(function(elPrice){
+        elPrice.textContent = elPrice.closest('.pricing-plan').dataset.monthlyPrice;
+      });
+    }
+  });
+});
 
   switch (target.id){
     case 'annual-payment-radio':
