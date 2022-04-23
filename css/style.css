@@ -298,20 +298,6 @@ img{
   border-bottom: 1px solid var(--features-line-color);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* BACKGROUND-IMAGE FOR RETINA SCREENS */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
