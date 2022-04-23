@@ -164,14 +164,11 @@ img{
   cursor: pointer;
 }
 
-.switch-control-monthly{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  cursor: pointer;
+.switch-input-annual:checked ~ .switch-control-monthly,
+.switch-input-monthly:checked ~ .switch-control-annualy{
+  z-index: 5;
 }
+
 
 .switch-label {
   cursor: pointer;
