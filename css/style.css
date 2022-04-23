@@ -43,6 +43,10 @@ body{
   font-weight: bold;
   font-family:'Montserrat',"Arial", sans-serif;
   background-color: var(--main-page-bg-color);
+  background-image: url("../images/bg-lines-top.svg"),
+  url("../images/bg-lines-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: top -103px right -97px, left -120px bottom -460px ;
   color: var(--main-text-color);
   overflow-x: hidden;
 }
